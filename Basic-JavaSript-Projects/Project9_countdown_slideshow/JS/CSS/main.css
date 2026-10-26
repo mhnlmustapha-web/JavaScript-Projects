@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    text-align: center; /* Centers inline elements on the page body */
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px; 
+  position: relative; 
+  margin: 0 auto;     /* Centers the container block on the page */
+  text-align: center;
+}
+
+/* Ensure each slide centers its contents */
+.mySlides {
+    display: none;
+}
+
+/* Ensures the images scale down neatly and center */
+.slideshow-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;     /* Centers the image horizontally inside the container */
+  border-radius: 8px; /* Optional: adds smooth rounded corners */
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from { opacity: .4 } 
+    to { opacity: 1 }
+}
