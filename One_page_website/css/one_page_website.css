@@ -1,0 +1,169 @@
+/* ==========================================
+   GALLERY GRID STYLES
+   ========================================== */
+
+/* Container for the showroom gallery grid */
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Set each image column to take up an equal, responsive share */
+.column {
+    flex: 30%;
+    max-width: 30%;
+}
+
+/* Force the thumbnail images to fit neatly inside their columns */
+.column img {
+    width: 250px;
+    height: 150px;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+/* Add a subtle fade effect when hovering over gallery thumbnails */
+.column img:hover {
+    opacity: 0.8;
+}
+
+
+/* ==========================================
+   MODAL / LIGHTBOX OVERLAY STYLES
+   ========================================== */
+
+/* The Modal background overlay (hidden by default) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 20px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Content container box */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;             /* Automatically centers the box */
+  padding: 0;
+  width: 90%;
+  max-width: 900px;         /* Keeps the modal from getting too wide */
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* The Close Button ("X") */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* Hover and focus states for the close button */
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* ==========================================
+   LIGHTBOX SLIDES & NAVIGATION ARROWS
+   ========================================== */
+
+/* Ensure all lightbox images share a fixed, consistent height so the box doesn't jump */
+.mySlides img {
+    width: 100%;
+    height: 450px;          /* Sets a fixed height for all modal pictures */
+    object-fit: contain;    /* Keeps the whole car visible without distorting or stretching */
+    background-color: black;/* Fills any empty side space with a clean black background */
+}
+
+/* Next & previous navigation buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 20px;          /* Increases the clickable space/padding around the arrows */
+  margin-top: -35px;      /* Keeps them precisely centered vertically */
+  color: white;
+  font-weight: bold;
+  font-size: 35px;        /* Makes the arrow symbols much bigger */
+  transition: 0.6s ease;
+  border-radius: 3px;
+  user-select: none;
+  -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.4); /* Adds a nice dark background so they stand out */
+}
+
+/* Position the "next button" to the far right side */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Darker background on hover for navigation arrows */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* ==========================================
+   CAPTIONS, NUMBERS & THUMBNAILS
+   ========================================== */
+
+/* Number text indicator (e.g., 1/3) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 16px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Caption text container at the bottom of the modal */
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+/* Demo thumbnail images inside the modal */
+img.demo {
+  opacity: 0.6;
+}
+
+/* Active or hovered thumbnail styles */
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+/* Transition setup for hover shadow effect */
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+/* Drop shadow effect when hovering over images */
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

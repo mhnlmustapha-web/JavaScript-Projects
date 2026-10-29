@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character encoding and responsive viewport settings -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamad's Auto World</title>
+    
+    <!-- Link to the external CSS stylesheet -->
+    <link rel="stylesheet" href="css/one_page_website.css">
+</head>
+<body>
+
+    <!-- F. Navigation element with HTML anchor bookmarks -->
+    <nav>
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#gallery">Showroom</a></li>
+            <li><a href="#videos">Featured Review</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <hr>
+
+    <!-- A. Home page section / Welcome banner -->
+    <section id="home">
+        <h1>Welcome to Mohamad Auto World</h1>
+        <p>Your ultimate destination for automotive passion, high-performance vehicles, and cutting-edge car reviews. Explore the latest models, timeless classics, and future electric mobility all in one place.</p>
+    </section>
+
+    <hr>
+
+    <!-- B. Vehicle Showroom Section (Thumbnails and Lightbox Modal) -->
+    <section id="gallery">
+        <h2>Vehicle Showroom</h2>
+        <p>Check out some of our featured models (Click an image to open in lightbox):</p>
+        
+        <!-- Thumbnail Grid: Click an image to open modal and jump to that specific slide -->
+        <div class="row">
+          <div class="column">
+            <img src="images/honda.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" alt="Honda">
+          </div>
+          <div class="column">
+            <img src="images/mercedes.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" alt="Mercedes">
+          </div>
+          <div class="column">
+            <img src="images/toyota.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow" alt="Toyota">
+          </div>
+        </div>
+
+        <!-- The Modal / Lightbox Overlay Container -->
+        <div id="myModal" class="modal">
+          <!-- Close button ("X") to exit the modal -->
+          <span class="close cursor" onclick="closeModal()">&times;</span>
+          <div class="modal-content"></div>
+
+            <!-- Slide 1: Honda Large Image -->
+            <div class="mySlides">
+              <div class="numbertext">1 / 3</div>
+              <img src="images/honda.jpg" style="width:100%" alt="Honda Large">
+            </div>
+
+            <!-- Slide 2: Mercedes Large Image -->
+            <div class="mySlides">
+              <div class="numbertext">2 / 3</div>
+              <img src="images/mercedes.jpg" style="width:100%" alt="Mercedes Large">
+            </div>
+
+            <!-- Slide 3: Toyota Large Image -->
+            <div class="mySlides">
+              <div class="numbertext">3 / 3</div>
+              <img src="images/toyota.jpg" style="width:100%" alt="Toyota Large">
+            </div>
+            
+            <!-- Next and Previous arrow navigation controls -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+
+            <!-- Caption text area -->
+            <div class="caption-container">
+              <p id="caption"></p>
+            </div>
+
+            <!-- Thumbnail image controls inside the modal footer -->
+            <div class="column">
+              <img class="demo" src="images/honda.jpg" onclick="currentSlide(1)" alt="Honda">
+            </div>
+
+            <div class="column">
+              <img class="demo" src="images/mercedes.jpg" onclick="currentSlide(2)" alt="Mercedes">
+            </div>
+
+            <div class="column">
+              <img class="demo" src="images/toyota.jpg" onclick="currentSlide(3)" alt="Toyota">
+            </div>
+        </div>
+    </section> <!-- End of Gallery Section -->
+
+    <hr>
+
+    <!-- D. Section with Featured Video(s) -->
+    <section id="videos">
+        <h2>Featured Car Review</h2>
+        <p>Watch our detailed walk-around and test drive preview:</p>
+        <iframe 
+            width="560" 
+            height="315" 
+            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            title="Automobile Review Video" 
+            frameborder="0" 
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <hr>
+
+    <!-- C. Contact Form Section for Test Drive Inquiries -->
+    <section id="contact">
+        <h2>Schedule a Test Drive / Contact Us</h2>
+        <form action="#" method="post">
+            <div>
+                <label for="name">Full Name:</label><br>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <br>
+            <div>
+                <label for="email">Email Address:</label><br>
+                <input type="email" id="email" name="email" required>
+            </div><br>
+            <div>
+                <label for="tel">Phone Number:</label><br>
+                <input type="tel" id="tel" name="tel" required>
+            </div>
+            <br>
+            <div>
+                <label for="model">Interested Car Model / Inquiry:</label><br>
+                <textarea id="model" name="model" rows="4" cols="40" required></textarea>
+            </div>
+            <br>
+            <button type="submit">Submit Inquiry</button>
+        </form>
+    </section>
+
+    <hr>
+
+    <!-- E. Footer Section -->
+    <footer>
+        <p>&copy; 2026 Mohamad's Auto World. All rights reserved.</p>
+    </footer>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="js/one_page_website.js"></script>
+</body>
+</html>
