@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <!-- Link the external stylesheet -->
+    <link rel="stylesheet" href="css/css.css">
+</head>
+<body>
+    <!-- Main calculator container -->
+    <div class="calculator">
+        <!-- Calculator screen displaying current input or results -->
+        <input type="text" class="calculator-screen" value="0" disabled />
+
+        <!-- Container holding all the calculator keypad buttons -->
+        <div class="calculator-keys">
+            <!-- Operator buttons -->
+            <button type="button" class="operator" value="+">+</button>
+            <button type="button" class="operator" value="-">-</button>
+            <button type="button" class="operator" value="*">&times;</button>
+            <button type="button" class="operator" value="/">&divide;</button>
+
+            <!-- Number pad rows -->
+            <button type="button" value="7">7</button>
+            <button type="button" value="8">8</button>
+            <button type="button" value="9">9</button>
+
+            <button type="button" value="4">4</button>
+            <button type="button" value="5">5</button>
+            <button type="button" value="6">6</button>
+
+            <button type="button" value="1">1</button>
+            <button type="button" value="2">2</button>
+            <button type="button" value="3">3</button>
+
+            <!-- Bottom row buttons (0, decimal, clear, equals) -->
+            <button type="button" value="0">0</button>
+            <button type="button" class="decimal" value=".">.</button>
+            <button type="button" class="all-clear" value="all-clear">AC</button>
+            <button type="button" class="equal-sign operator" value="=">=</button>
+        </div>
+    </div>
+
+    <!-- Link the external JavaScript file with defer so it loads after the DOM -->
+    <script src="js/main.js" defer></script>
+</body>
+</html>
