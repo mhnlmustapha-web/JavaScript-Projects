@@ -1,0 +1,94 @@
+/* 1. Assign a background color to your <body> element */
+body {
+    background-color: #2b2b2b;
+}
+
+/* 2 & 3. Assign a font family and color to all <h1> elements */
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* 4 & 5. Assign a font family and color to all <h3> elements */
+h3 {
+    font-family: 'Arial', sans-serif;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+/* 6 & 7. Assign a font family and color to all <div> elements */
+div {
+    font-family: 'Verdana', sans-serif;
+    color: #ffffff;
+}
+
+/* Main background wrapper card that holds the entire interface */
+#menuBG {
+    width: 650px;
+    height: 280px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Forces Size, Vegetables, and Meats into a neat horizontal row using Flexbox */
+#frmMenu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+/* Sets dimensions and resets floats for the left and right option columns */
+.left, .right {
+    width: 210px;
+    height: 200px;
+    float: none;
+    margin: 0;
+}
+
+/* Place Order button styled and centered nicely below the menu */
+#btnOrder {
+    display: block;
+    clear: both;
+    margin: 20px auto;
+    width: 120px;
+    height: 40px;
+    background-color: #ffcc00;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+/* --- You Ordered / Total Section Dropped Down & Centered --- */
+#cart {
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+    margin: 25px auto 0 auto;
+    width: 650px;
+    border-top: 1px solid #555555;
+    padding-top: 15px;
+}
+
+/* Styles the area where the ordered item list text is dynamically rendered */
+#showText {
+    width: 280px;
+    height: auto;
+    float: none;
+    margin: 0;
+}
+
+/* Styles and right-aligns the final calculated price display */
+#totalPrice {
+    width: 280px;
+    height: auto;
+    float: none;
+    margin: 0;
+    text-align: right;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffcc00;
+}
